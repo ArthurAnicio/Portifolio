@@ -1,0 +1,519 @@
+*{box-sizing: border-box;
+    border: 0;
+    margin: 0;    
+    
+}
+body{
+background: url(fundo3.jpg) fixed center;
+background-size: cover;
+font-family: 'Jomhuria', cursive;
+transition: 1s;
+}
+body.dark-mode{
+    background: url(ceulegal.jpg) fixed center no-repeat;
+}
+
+#cabecario{
+    height: 17vh;
+    width: 100%;
+    background: linear-gradient( rgba(14, 0, 52, 100%), rgba(24, 0, 91, 80%),rgba(34, 34, 34, 7%));
+    display: flex;
+    padding-top: 1.5vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: start;
+    z-index: 10;
+    transition: 1s;
+}
+#cabecario.dark-mode{
+    background: linear-gradient( rgb(172, 243, 239), rgba(179, 205, 216, 0));
+}
+#h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+    font-size: 10vh;
+    transition: 1s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#h1.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#barra{
+    background: linear-gradient(to bottom, #00B1D8, #0A326D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+}
+#barra.dark-mode{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#atual{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 2vw;
+    font-size: 9vh;
+    text-decoration: inherit;
+    transition: 1s;
+}
+#atual.dark-mode{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#pag{
+     background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 2vw;
+    font-size: 7vh;
+    text-decoration: inherit;
+    transition: 0.65s;
+}
+#pag2{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-left: 2vw;
+   font-size: 7vh;
+   text-decoration: inherit;
+   transition: 0.65s;
+}
+#pag.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#pag2.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#h2{
+    display: flex;
+    align-items: center;
+    margin-left: 30vw;
+    
+}
+#pag:hover{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+#pag.dark-mode:hover{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#pag2:hover{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+#pag2.dark-mode:hover{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.switch {
+    margin-left: 2vw;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+#Onda{
+    width: 100%;
+    display: flex;
+    bottom: 0vh;
+    transition: 1s;
+}
+#Onda img{
+    width: 100%;
+    transition: 1s;
+}
+#corpo{
+    width: 100%;
+    background-color: #3003AD;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+
+}
+#corpo.dark-mode{
+    background-color: white;
+}
+#habilidades{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 10vh;
+
+}
+#habilidades.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#capacidades{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 5vw;
+    row-gap: 10vh;
+    margin-top: 10vh;
+}
+
+#capacidade{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade img{
+    height: 60%;
+}
+#capacidade2{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade2:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade2.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade2.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade2 img{
+    height: 60%;
+}
+#capacidade3{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade3:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade3.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade3.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade3 img{
+    height: 60%;
+}
+#capacidade4{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade4:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade4.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade4.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade4 img{
+    height: 60%;
+}
+#capacidade5{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade5:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade5.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade5.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade5 img{
+    height: 60%;
+}
+#capacidade6{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade6:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade6.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade6.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade6 img{
+    height: 60%;
+}
+#capacidade7{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade7:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade7.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade7.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade7 img{
+    height: 60%;
+}
+#capacidade8{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade8:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade8.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade8.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade8 img{
+    height: 60%;
+}
+#capacidade9{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069);
+    height: 35vh;
+    width: 33vh;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    transition: 0.4s;
+    flex-direction: column;
+}
+#capacidade9:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+}
+#capacidade9.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94);
+}
+#capacidade9.dark-mode:hover{
+    scale: 1.1;
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+}
+#capacidade9 img{
+    height: 60%;
+}
+#label{
+    background: linear-gradient(to bottom, #f7f7f5, #f7e601);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 8vh;
+    margin-top: 3vh; 
+}
+#rodape{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to bottom, #3003AD,rgb(14, 1, 48),rgba(14, 0, 52, 100%), rgb(6, 0, 22));
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#direitos{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6.5vh;
+}
+#rodape.dark-mode{
+    
+    background: linear-gradient(to bottom, #ffffff,rgb(172, 243, 239),rgb(162, 243, 239), rgb(137, 252, 246));
+    
+}
+#direitos.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#menu{
+    position: fixed;
+    z-index: 9999;
+    
+    bottom: 0;
+    width: 30%;
+    height: 10vh;
+    background: linear-gradient(to bottom, #3003AD,rgb(14, 1, 48));
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+}
+#iconeatual{
+    height: 5vh;
+    fill: #00B1D8;
+    scale: 1.1;
+}
+#icone{
+    height: 5vh;
+    fill: #FA0069;
+}
+#icone:hover{
+    fill: #00B1D8;
+    scale: 1.1; 
+}
+#icone2{
+    height: 5vh;
+    fill: #FA0069;
+}
+#icone2:hover{
+    fill: #00B1D8;
+    scale: 1.1; 
+}
+

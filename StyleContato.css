@@ -1,0 +1,485 @@
+*{box-sizing: border-box;
+    border: 0;
+    margin: 0;    
+    
+}
+body{
+background: url(fundo2vdd.jpg) fixed center;
+background-size: cover;
+font-family: 'Jomhuria', cursive;
+transition: 1s;
+}
+body.dark-mode{
+    background: url(fundoceu.jpg) fixed center ;  
+}
+
+#cabecario{
+    height: 17vh;
+    width: 100%;
+    background: linear-gradient( rgba(14, 0, 52, 100%), rgba(24, 0, 91, 80%),rgba(34, 34, 34, 7%));
+    display: flex;
+    padding-top: 1.5vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: start;
+    z-index: 10;
+    transition: 1s;
+}
+#cabecario.dark-mode{
+    background: linear-gradient( rgb(172, 243, 239), rgba(179, 205, 216, 0));
+}
+#h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+    font-size: 10vh;
+    transition: 1s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#h1.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#barra{
+    background: linear-gradient(to bottom, #00B1D8, #0A326D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+}
+#barra.dark-mode{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#atual{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 2vw;
+    font-size: 9vh;
+    text-decoration: inherit;
+    transition: 1s;
+}
+#atual.dark-mode{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#pag{
+     background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 2vw;
+    font-size: 7vh;
+    text-decoration: inherit;
+    transition: 0.65s;
+}
+#pag2{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-left: 2vw;
+   font-size: 7vh;
+   text-decoration: inherit;
+   transition: 0.65s;
+}
+#pag.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#pag2.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#h2{
+    display: flex;
+    align-items: center;
+    margin-left: 30vw;
+}
+#pag:hover{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+#pag.dark-mode:hover{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#pag2:hover{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+#pag2.dark-mode:hover{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.switch {
+    margin-left: 2vw;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+#Onda{
+    width: 100%;
+    display: flex;
+    bottom: 0vh;
+    transition: 1s;
+}
+#Onda img{
+    width: 100%;
+    transition: 1s;
+}
+#corpo{
+    width: 100%;
+    background-color: #3003AD;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-left: 15%;
+    padding-right: 15%;
+    column-gap: 2vw;
+    row-gap: 3vh;
+    transition: 1s;
+}
+#corpo.dark-mode{
+    background-color: white;
+}
+#nome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 5vh;
+    width: 35vw;
+}
+#nome h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vh;
+    margin-right: 1.5vw;
+    transition: 1s;
+}
+#nome input{
+    border-radius: 1em;
+    height: 5vh;
+    width: 100%;
+    font-size: 6vh;
+    border: solid;
+    border-color: #FA0069;
+    background-color: #033ead;
+    color: #FA0069;
+    font-family: 'Jomhuria', cursive;
+    transition: 1s;
+}
+#nome.dark-mode h1{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#nome.dark-mode input{
+    border-color: #25487c;
+    background-color: lightblue;
+    color: #25487c;
+}
+#email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 5vh;
+    width: 35vw;
+}
+#email h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vh;
+    margin-right: 1.5vw;
+    transition: 1s;
+}
+#email input{
+    border-radius: 1em;
+    height: 5vh;
+    width: 100%;
+    font-size: 6vh;
+    border: solid;
+    border-color: #FA0069;
+    background-color: #033ead;
+    color: #FA0069;
+    font-family: 'Jomhuria', cursive;
+    transition: 1s;
+}
+#email.dark-mode h1{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#email.dark-mode input{
+    border-color: #25487c;
+    background-color: lightblue;
+    color: #25487c;
+}
+#numero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 5vh;
+    width: 35vw;
+}
+#numero h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vh;
+    margin-right: 1.5vw;
+    transition: 1s;
+}
+#numero input{
+    border-radius: 1em;
+    height: 5vh;
+    width: 100%;
+    font-size: 6vh;
+    border: solid;
+    border-color: #FA0069;
+    background-color: #033ead;
+    color: #FA0069;
+    font-family: 'Jomhuria', cursive;
+    transition: 1s;
+}
+#numero.dark-mode h1{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#numero.dark-mode input{
+    border-color: #25487c;
+    background-color: lightblue;
+    color: #25487c;
+}
+#assunto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 5vh;
+    width: 35vw;
+}
+#assunto h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vh;
+    margin-right: 1.5vw;
+    transition: 1s;
+}
+#assunto input{
+    border-radius: 1em;
+    height: 5vh;
+    width: 100%;
+    font-size: 6vh;
+    border: solid;
+    border-color: #FA0069;
+    background-color: #033ead;
+    color: #FA0069;
+    font-family: 'Jomhuria', cursive;
+    transition: 1s;
+}
+#assunto.dark-mode h1{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#assunto.dark-mode input{
+    border-color: #25487c;
+    background-color: lightblue;
+    color: #25487c;
+}
+#mensagem{
+    display: flex;
+    flex-direction: column;
+    
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+#mensagem h1{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vh;
+    margin-left: 43%;
+    transition: 1s;
+}
+#mensagem textarea{
+    border-radius: 0.5em;
+    height: 100%;
+    width: 100%;
+    font-size: 6vh;
+    border: solid;
+    border-color: #FA0069;
+    background-color: #033ead;
+    color: #FA0069;
+    font-family: 'Jomhuria', cursive;
+    transition: 1s;
+}
+#mensagem.dark-mode h1{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#mensagem.dark-mode textarea{
+    border-color: #25487c;
+    background-color: lightblue;
+    color: #25487c;
+}
+#botao{
+    width: 10%;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    font-family: 'Jomhuria', cursive;
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6vh;
+    
+    margin-left: 45%;
+    transition: 0.6s;
+}
+#botao:hover{
+    background: linear-gradient(to bottom, #3ad0f1, #25487c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.2;
+}
+#botao.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#botao.dark-mode:hover{
+    background: linear-gradient(to bottom, #f8d304, rgb(245, 50, 1));;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#rodape{
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to bottom, #3003AD,rgb(14, 1, 48),rgba(14, 0, 52, 100%), rgb(6, 0, 22));
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#direitos{
+    background: linear-gradient(to bottom, #FF5B83, #FA0069, #3080AD);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6.5vh;
+}
+#rodape.dark-mode{
+    
+    background: linear-gradient(to bottom, #ffffff,rgb(172, 243, 239),rgb(162, 243, 239), rgb(137, 252, 246));
+    
+}
+#direitos.dark-mode{
+    background: linear-gradient(to bottom, #07012b, #0b2b94, #f7e05d);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#menu{
+    position: fixed;
+    z-index: 9999;
+    margin-left: 35%;
+    bottom: 0;
+    width: 30%;
+    height: 10vh;
+    background: linear-gradient(to bottom, #3003AD,rgb(14, 1, 48));
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+}
+#iconeatual{
+    height: 5vh;
+    fill: #00B1D8;
+    scale: 1.1;
+}
+#icone{
+    height: 5vh;
+    fill: #FA0069;
+}
+#icone:hover{
+    fill: #00B1D8;
+    scale: 1.1; 
+}
+#icone2{
+    height: 5vh;
+    fill: #FA0069;
+}
+#icone2:hover{
+    fill: #00B1D8;
+    scale: 1.1; 
+}
